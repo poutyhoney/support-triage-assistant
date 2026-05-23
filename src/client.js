@@ -9,7 +9,7 @@ const MODEL = "claude-sonnet-4-6";
 const SYSTEM_PROMPT = `You are a support ticket triage assistant for a SaaS company.
 For each ticket, return a JSON object with exactly these fields:
 {
-    "category": one of "bug" | "config" | "billing" | "how_to" | "feature_request",
+    "category": one ofgitch "bug" | "config" | "billing" | "how_to" | "feature_request",
     "severity": one of "low" | "medium" | "high" | "critical",
     "summary": a one-sentence summary of the issue,
     "suggested_fist_response": a brief, professional response the support engineer could send,
