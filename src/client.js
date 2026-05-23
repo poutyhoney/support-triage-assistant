@@ -23,7 +23,6 @@ For each ticket, return a JSON object with exactly these fields:
  * Bad-output handling is the orchestrator's job.
  */
 export async function callTriageModel(ticket, {maxAPIRetries = 3} = {}) {
-    console.log("^^^^^ just loaded callTriageModel ^^^^^");
     let lastError;
 
     for (let attempt = 1; attempt <= maxAPIRetries; attempt++) {

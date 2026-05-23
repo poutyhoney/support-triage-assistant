@@ -10,11 +10,9 @@ import { validateTriage } from "./validate.js";
  * Returns { ok: true, result } or { ok: false, reason, lastErrors }.
  */
 export async function triageTicket(ticket, { maxOutputRetries = 2 } = {}) {
-    console.log("^^^^^ just loaded triageTicket ^^^^^");
     let correctionHint = "";
 
     for (let attempt = 1; attempt <= maxOutputRetries + 1; attempt++) {
-        console.log(`\n========= TRIAGE ATTEMPT ${attempt} =========`);
         let rawText;
         try {
             const ticketForModel = correctionHint ? {

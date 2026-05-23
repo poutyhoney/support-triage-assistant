@@ -7,9 +7,6 @@ const VALID_SEVERIITIES = ["low", "medium", "high", "critical"];
  * Does NOT throw -- the caller decides whether to retry or escalate.
  */
 export function validateTriage(obj) {
-    console.log("^^^^^ just loaded validateTriage ^^^^^");
-    console.log("Suggested First Response: ", typeof obj.suggested_first_response);
-    // console.log("Trimmed First Response: ", obj.suggested_first_response.trim());
     const errors = [];
 
     if (typeof obj !== "object" || obj === null) {
