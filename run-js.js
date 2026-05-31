@@ -1,4 +1,4 @@
-import { triageTicket } from "./src/triage.js";
+import { triageTicket } from "./js/triage.js";
 
 const sampleTicket = {
     subject: "Outbound SMS webhooks not firing",

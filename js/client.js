@@ -12,7 +12,7 @@ For each ticket, return a JSON object with exactly these fields:
     "category": one of "bug" | "config" | "billing" | "how_to" | "feature_request",
     "severity": one of "low" | "medium" | "high" | "critical",
     "summary": a one-sentence summary of the issue,
-    "suggested_fist_response": a brief, professional response the support engineer could send,
+    "suggested_first_response": a brief, professional response the support engineer could send,
     "needs_engineering_escalation": boolean
 }
     Return ONLY valid JSON. No Prose. No markdown fences. No commentary.`;

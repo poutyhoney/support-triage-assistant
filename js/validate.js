@@ -1,5 +1,5 @@
 const VALID_CATEGORIES = ["bug", "config", "billing", "how_to", "feature_request"];
-const VALID_SEVERIITIES = ["low", "medium", "high", "critical"];
+const VALID_SEVERITIES = ["low", "medium", "high", "critical"];
 
 /**
  * Validates a parsed triage object against the expected contract.
@@ -19,9 +19,9 @@ export function validateTriage(obj) {
         );
     }
 
-    if (!VALID_SEVERIITIES.includes(obj.severity)) {
+    if (!VALID_SEVERITIES.includes(obj.severity)) {
         errors.push(
-            `category: expected one of ${VALID_SEVERIITIES.join("|")}, got ${JSON.stringify(obj.severity)}`
+            `category: expected one of ${VALID_SEVERITIES.join("|")}, got ${JSON.stringify(obj.severity)}`
         );
     }
 

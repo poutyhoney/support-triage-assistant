@@ -1,0 +1,102 @@
+[
+  {
+    "id": "T01",
+    "subject": "Webhook not receiving SMS inbound events",
+    "body": "Hi, we configured our messaging service webhook URL to point to https://our-app.example.com/sms/inbound but we are not receiving any POST requests when customers send SMS to our Twilio number. We verified the endpoint is publicly accessible and returns 200. We also checked our Twilio console and the messaging service shows the correct URL. This started happening yesterday around 3pm UTC. Our number is +15551234567. Can you help?"
+  },
+  {
+    "id": "T02",
+    "subject": "Charged for calls we never made",
+    "body": "We noticed on our invoice for last month there are over 4,000 outbound voice minutes billed to our account. We are a small team and only use the voice API for inbound calls. We have never initiated outbound calls programmatically. The charges total around $380 and appeared on the invoice dated the 1st of this month. Account SID is ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. Please investigate and issue a refund."
+  },
+  {
+    "id": "T03",
+    "subject": "Flex agent UI keeps crashing when accepting a task",
+    "body": "Critical issue affecting our entire contact center. When an agent clicks the Accept button on an incoming voice task in the Flex UI, the React component throws an uncaught exception and the whole browser tab crashes. This is happening across Chrome 124 and Edge 124 for all 47 of our agents. Error in console: 'Cannot read properties of undefined (reading channel)'. We are on Flex UI version 2.7.1. This started after we deployed a plugin update last night. We are completely unable to handle customer calls right now."
+  },
+  {
+    "id": "T04",
+    "subject": "How do I set up SSO with Okta for Flex?",
+    "body": "Hello, we want our agents to log into Flex using their existing Okta credentials instead of separate Twilio usernames. Can you walk me through how to configure SAML 2.0 SSO with Okta as the identity provider? I found some docs but they mention both the Flex SSO settings and something about OAuth in the console and I'm not sure which path to take. We are currently on Flex UI 2.x. Thank you."
+  },
+  {
+    "id": "T05",
+    "subject": "TwiML <Gather> verb not capturing DTMF input correctly",
+    "body": "We have a TwiML application where we use the Gather verb to collect a 4-digit PIN from callers. Sometimes the gathered digits are truncated or empty even when the caller definitely pressed keys. Our TwiML looks like: <Gather numDigits='4' action='/verify-pin' method='POST'><Say>Please enter your PIN</Say></Gather>. We are seeing this on roughly 15% of calls. It seems worse on calls from mobile carriers. Is this a known issue or is there something wrong with our TwiML?"
+  },
+  {
+    "id": "T06",
+    "subject": "Need help understanding our bill - lots of line items I don't recognize",
+    "body": "Hi there, I've been looking at our bill and honestly I'm confused. There's a line for 'Programmable Messaging - Carrier Surcharge' which I don't remember agreeing to, and also something called 'Short Code MMS' which we don't use short codes at all. We only have a 10DLC long code number. And then there's a separate charge under Voice that says 'Insights' - what is that? I feel like we're being overcharged but I'm not sure. Can someone look at our account and explain what each of these charges are? Account SID starts with AC44..."
+  },
+  {
+    "id": "T07",
+    "subject": "Feature request: ability to pause/resume task routing in Flex without going unavailable",
+    "body": "Our supervisors have requested a way to temporarily stop new tasks from being routed to a specific agent - for example during a coaching session - without forcing the agent to change their activity state to Unavailable, which would affect our adherence reporting. Ideally this would be a supervisor action from the Teams View panel. Currently we have to use the TaskRouter Worker Activity API as a workaround which is clunky and shows up incorrectly in our WFM reports. Is this on the roadmap?"
+  },
+  {
+    "id": "T08",
+    "subject": "SMS messages delivering with up to 45 minute delay",
+    "body": "This is urgent for us. Starting this morning at approximately 9am EST our customers are reporting that appointment reminder SMS messages are arriving 30-45 minutes after we send them via the API. The API call returns a 200 with status 'queued' immediately but the messages sit in that state for a very long time. We send about 2,000 messages per hour during our morning batch. Our Messaging Service SID is MGxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. Is there a platform incident? We don't see anything on the status page."
+  },
+  {
+    "id": "T09",
+    "subject": "OAuth token refresh failing with 401 in Flex plugin",
+    "body": "We built a Flex plugin that calls our internal CRM API using an OAuth 2.0 access token stored in the Flex manager. The initial token works fine but when the token expires (1 hour) and we try to refresh it using the refresh_token grant, we get a 401 Unauthorized back from our token endpoint. We've confirmed the refresh token itself is valid when tested via Postman. The plugin uses FlexManager.getInstance().store to persist the tokens. We think something about how Flex handles the plugin lifecycle might be invalidating stored state but we're not sure. Could this be a Flex bug or is it our implementation?"
+  },
+  {
+    "id": "T10",
+    "subject": "How to route calls to different queues based on caller ID?",
+    "body": "Hi, we are building an IVR and want to route callers to different TaskRouter queues depending on their phone number - specifically we have a list of VIP customer numbers that should go straight to a premium support queue bypassing the normal queue. I know this involves TaskRouter workflows but I'm not sure how to pass the caller's number as a task attribute and then write the workflow filter expression to match against our VIP list. Do we maintain the list in TaskRouter or in our own database? What's the recommended architecture here?"
+  },
+  {
+    "id": "T11",
+    "subject": "Account suspended - please help",
+    "body": "Our account has been suspended and we can't send any messages or make calls. We received an email this morning but it was vague. We are in the middle of a product launch and this is a catastrophic situation for our business. We need this resolved TODAY. Nothing about our usage has changed. We process medical appointment reminders for clinics and have done so for 2 years without issues. Account SID is ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy."
+  },
+  {
+    "id": "T12",
+    "subject": "Flex WrapUp timer not auto-advancing to next state",
+    "body": "Hey team, so we have this problem that's been going on for maybe two weeks now and I keep meaning to write in about it. Basically our agents finish a call and they go into the WrapUp activity which is great, but the thing is we set up the auto-wrap timeout to be 60 seconds in the Flex configuration, at least I think we did, and some agents are staying in WrapUp forever basically. It's not all agents, maybe like a third of them? And it seems like it might be related to whether they took a transfer at some point during the call but honestly I'm not sure. Also separately the supervisor dashboard shows some agents as Available when they're actually on a call but that might be a different thing. Anyway let me know what you think."
+  },
+  {
+    "id": "T13",
+    "subject": "Verify API: sending OTP but users never receive the code",
+    "body": "We integrated the Twilio Verify API to send OTP codes for user login. The API returns a 'pending' status when we create the verification, which we understand means it was accepted, but a significant portion of our users (we estimate 20-30%) report never receiving the SMS. We are NOT using a custom template. This seems to affect users on certain carriers more than others - we've noticed AT&T users have more complaints. Our Verify Service SID is VAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. Is there a deliverability issue with Verify specifically or could this be a 10DLC registration problem?"
+  },
+  {
+    "id": "T14",
+    "subject": "Feature request: dark mode for Flex agent desktop",
+    "body": "A lot of our agents work overnight shifts and have been requesting a dark mode option for the Flex UI. Staring at a bright white screen for 8 hours causes eye strain. We know we can customize the theme via the Flex UI theming API in a plugin but implementing a full dark theme from scratch is a significant undertaking. It would be great if Twilio provided an official dark theme or a theme switcher out of the box. Is this planned?"
+  },
+  {
+    "id": "T15",
+    "subject": "Programmable Voice: conference recording not starting",
+    "body": "We use the <Conference> TwiML verb with record='record-from-start' but recordings are not being created. The conference connects fine, all participants can hear each other, but when the call ends we see no recording in the console and the RecordingStatusCallback URL we specified is never hit. We tested this with a simple TwiML Bin to rule out our application code and the same thing happens. Our account is a paid account with recordings enabled. Account SID is AC55..."
+  },
+  {
+    "id": "T16",
+    "subject": "How do I migrate from Twilio Client JS SDK v1 to v2?",
+    "body": "We have a fairly large legacy codebase using Twilio Client JS 1.x for browser-based calling. We want to upgrade to the Voice SDK 2.x. What are the key breaking changes we should be aware of? Specifically: (1) does the new SDK still use AccessTokens with the same structure, (2) is the Device.connect() API signature the same, (3) how do we handle the new audio constraints APIs? Also is there a coexistence period where we can run both versions or do we need a hard cutover? We have about 200 concurrent users so we need to plan this carefully."
+  },
+  {
+    "id": "T17",
+    "subject": "TaskRouter worker not going offline when browser tab closes",
+    "body": "When an agent closes the browser tab or their browser crashes, their TaskRouter worker remains in the Available activity state. This means new tasks keep routing to them and then timeout after the reservation TTL, which impacts our queue SLA metrics. We have the Flex UI handling the worker state. We expected it would use the beforeunload event to set the worker offline but apparently this is not reliable. Is there a recommended way to handle this? Does Flex have a built-in heartbeat mechanism that will eventually mark the worker offline?"
+  },
+  {
+    "id": "T18",
+    "subject": "Incorrect caller ID showing on outbound calls from Flex",
+    "body": "When our agents make outbound calls from the Flex agent desktop, the caller ID showing to the recipient is not our main business number (+15559876543) as configured. Instead, some calls show a completely different Twilio number and some show 'Unknown'. This is confusing our customers who look up the number and don't recognize it as us. We set the callerId in the Flex Outbound Call configuration to our verified number. This is intermittent - roughly 1 in 10 calls has the wrong caller ID."
+  },
+  {
+    "id": "T19",
+    "subject": "Getting error 20003 on API requests after rotating API key",
+    "body": "We rotated our Twilio API keys as part of a security audit last week. We updated the new API Key SID and Secret in our application's environment variables and redeployed. However we are now getting HTTP 401 errors with error code 20003 'Authentication Failed' on all REST API calls. We are using the Node.js Twilio helper library version 4.x. We double-checked the Key SID and Secret are correct by copying them fresh from the console. Account SID is also correct. The old key is definitely deactivated. What could cause this?"
+  },
+  {
+    "id": "T20",
+    "subject": "10DLC campaign registration rejected - not sure why",
+    "body": "We submitted our 10DLC Campaign registration about 3 weeks ago and just got a rejection notification but the reason listed is just 'Content violation - see guidelines' which isn't very helpful. Our use case is sending order confirmation and shipping update messages to customers who have explicitly opted in at checkout. We are a registered LLC, our brand is verified, and we thought our message samples were compliant. Is the rejection coming from Twilio or from the carrier registry (TCR)? Can we resubmit and if so what should we change? We're losing money every day we can't send these messages."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "T01",
+    "subject": "Webhooks not firing for inbound SMS",
+    "body": "Hi, our inbound SMS webhook has completely stopped working as of approximately 09:15 UTC this morning. We have not changed any configuration on our end. The endpoint is returning 200 OK when we test it manually with curl, and the URL is correctly set in the dashboard. We are missing hundreds of messages and our on-call automation pipeline is broken. This is a critical production issue. Please escalate immediately. Account ID: ACC-882341."
+  },
+  {
+    "id": "T02",
+    "subject": "How do I set up SSO with Okta?",
+    "body": "Hey team, we're trying to configure single sign-on for our agents using Okta as the identity provider. I've looked through the docs but I'm not sure which SAML attributes need to be mapped. Do you have a step-by-step guide or a sample Okta app configuration? We're on the Business plan. Thanks!"
+  },
+  {
+    "id": "T03",
+    "subject": "Charged twice for the same month",
+    "body": "I just noticed that our credit card was charged $1,840.00 on March 1st and again on March 3rd for what appears to be the same invoice (INV-20240301-00412). Please refund the duplicate charge and confirm what happened. Our billing contact is finance@acmecorp.com."
+  },
+  {
+    "id": "T04",
+    "subject": "Calls dropping after exactly 4 minutes",
+    "body": "We have a very strange issue. Every single outbound call our agents make gets disconnected at almost exactly the 4-minute mark. It doesn't matter which agent, which phone number, or which destination. The call just goes silent and then drops. This started happening yesterday afternoon. Before that everything was fine for months. We handle customer escalations over voice so this is severely impacting our operations. Call SIDs we've captured: CA9f3b1a, CA9f3b22, CA9f3b3d. Please help ASAP."
+  },
+  {
+    "id": "T05",
+    "subject": "Question about overage fees on SMS",
+    "body": "Hi, I'm trying to understand our last invoice. It shows 'SMS overage charges' of $340 but I thought our plan included unlimited domestic SMS. Can you clarify what counts as 'domestic' versus what triggers overage? Some of our numbers are in Puerto Rico — could that be the cause?"
+  },
+  {
+    "id": "T06",
+    "subject": "React agent UI freezes when transferring calls",
+    "body": "The agent desktop freezes intermittently when an agent tries to do a warm transfer. The spinner appears and then the whole tab becomes unresponsive. Agents have to force-refresh and by that time the call is lost. This happens maybe 3-4 times per hour across our team of 20 agents. Browser is Chrome 123. We are not seeing any JavaScript errors in the console — well, actually there is one: 'Cannot read properties of undefined (reading transfer_target)' but I don't know if that's related. Reproducing it on demand is difficult."
+  },
+  {
+    "id": "T07",
+    "subject": "Need higher rate limits for SMS API",
+    "body": "We're launching a marketing campaign next Tuesday and expect to send around 2 million SMS messages within a 6-hour window. Our current throughput limit appears to be 100 messages per second per long code. We'd like to request a temporary or permanent increase to at least 500 MPS. Can you let us know the process and timeline? We're happy to pay for it if needed."
+  },
+  {
+    "id": "T08",
+    "subject": "OAuth token keeps expiring too fast",
+    "body": "So we integrated your OAuth2 flow into our internal portal about two weeks ago and for the most part it works, but users keep getting logged out after what seems like 15 or 20 minutes. We set the scope to 'read write' and are using the authorization code flow with PKCE. Our refresh token logic should be handling expiry automatically but something isn't working right. Is the access token TTL configurable? Or is there maybe something wrong with how we're storing the refresh token? I can share code snippets if needed."
+  },
+  {
+    "id": "T09",
+    "subject": "Can't delete old phone numbers from the dashboard",
+    "body": "I'm trying to release some phone numbers we no longer use but the 'Release Number' button is grayed out for about half of them. The other half release fine. I can't figure out what's different about the ones that are grayed out. They don't appear to be assigned to any active flows or agents. Is there a lock somewhere I'm missing?"
+  },
+  {
+    "id": "T10",
+    "subject": "Urgent - all API calls returning 503",
+    "body": "URGENT. As of 14:32 EST every single API call we make to your platform is returning HTTP 503 with body {\"error\":\"service_unavailable\"}. This includes voice, SMS, and even the account info endpoint. Our entire contact center is down. 200+ agents are idle. Every minute of downtime costs us real money. Is there a known outage? Your status page shows all green which is clearly wrong. Please respond immediately."
+  },
+  {
+    "id": "T11",
+    "subject": "Feature request: dark mode for agent UI",
+    "body": "Hi, our agents work night shifts and have been asking for a dark mode option in the agent desktop UI. The current white background is quite harsh at 3am. Would love to see this as a theme option in user settings. We'd even be willing to participate in a beta if that helps. Thanks for considering it."
+  },
+  {
+    "id": "T12",
+    "subject": "Something weird with our bill this month",
+    "body": "Hi there, hope you're well. So I was just going through our finances for the quarter and I pulled up the invoices from your platform and I noticed the total for February was quite a bit higher than January — like almost double. I know we've been growing but it seems like a lot. I forwarded the invoice to my CTO and she also thought it seemed high. I guess my question is, is there a way to see a breakdown of exactly what we're being charged for? Like per feature or per API endpoint or something? I just want to make sure we're not being charged for something we're not using. Our account number is ACC-554871. Sorry if this is a dumb question, billing stuff confuses me."
+  },
+  {
+    "id": "T13",
+    "subject": "Inbound voice calls not reaching IVR — or maybe a routing issue?",
+    "body": "We've had two customers call our main support line today and report that they just got a generic 'number not in service' message instead of our IVR. We haven't changed our call flow configuration recently — the last change was about 3 weeks ago when we added a new menu option. Our DID is +1-800-555-0192. When I dial it myself from my cell it works fine. Could this be a carrier-side issue? Or is it possible something in our routing config is only broken for certain originating carriers? Or could our number have somehow gotten flagged? Not sure where to even start debugging this."
+  },
+  {
+    "id": "T14",
+    "subject": "Request: ability to export call recordings in bulk",
+    "body": "Currently we can only download call recordings one at a time from the UI, which is extremely tedious when we need to pull recordings for compliance audits. We'd like either a bulk export button in the dashboard or an API endpoint that lets us retrieve recording files programmatically by date range. This comes up for us every quarter and takes hours each time. Please consider adding this — it would be a huge time saver."
+  },
+  {
+    "id": "T15",
+    "subject": "API key suddenly invalid — did something change?",
+    "body": "We woke up this morning to alerts saying our integration is broken. All API requests are returning 401 Unauthorized. The API key we're using hasn't been touched in 8 months and worked fine until sometime last night. I checked the dashboard and the key is still listed as active and not revoked. Did you make any authentication changes? Could there be an IP allowlist issue? Our server IPs haven't changed either. Really confused and our integration is fully down."
+  },
+  {
+    "id": "T16",
+    "subject": "How to handle concurrent call limits in multi-tenant setup?",
+    "body": "We're building a multi-tenant platform on top of your APIs where each of our customers gets their own sub-account. I need to understand the best way to enforce per-tenant concurrent call limits so one noisy tenant can't exhaust capacity for everyone else. Is this something we configure through your API, or do we need to manage it in our own middleware layer? Also, are there any webhooks or events that fire when a concurrency limit is approached or hit? Would appreciate any guidance or example architectures."
+  },
+  {
+    "id": "T17",
+    "subject": "SMS deliverability suddenly dropped to ~40%",
+    "body": "This is urgent for us. As of yesterday our SMS delivery rate has cratered from the usual ~97% down to around 40% based on our delivery receipt webhooks. We haven't changed our message templates or sending patterns. The messages are standard transactional OTP codes. Failing messages are going to a mix of T-Mobile and Verizon numbers. AT&T seems fine. We are 10DLC registered and have been for 6 months. Is there a carrier filtering issue on your end, or is this something about our campaign registration? We're losing real customers who can't log in."
+  },
+  {
+    "id": "T18",
+    "subject": "Minor UI bug — timezone label shows wrong offset",
+    "body": "Small bug to report: in the call logs section of the agent UI, the timestamp column shows 'EST' as the timezone label even when the user's profile timezone is set to PST. The actual times displayed appear to be correct (they match PST) — it's just the label that's wrong. So it's cosmetic only but it caused some confusion in a team meeting when people were comparing timestamps. Chrome 123, Windows 11."
+  },
+  {
+    "id": "T19",
+    "subject": "Need to understand SLA and support tiers before renewal",
+    "body": "Our contract comes up for renewal in 45 days and our procurement team is asking for documentation on your SLA guarantees, specifically uptime commitments, RTO/RPO for disaster recovery, and what escalation paths exist for critical incidents. We're currently on the Professional plan. We've had two significant outages in the past year that affected us and we want to understand what credits we may be entitled to and whether upgrading to Enterprise SLA terms would give us better protection. Can someone from your team schedule a call to walk us through this?"
+  },
+  {
+    "id": "T20",
+    "subject": "Agents getting logged out of desktop randomly — maybe SSO related?",
+    "body": "I've been getting complaints from my agents for the past week or so that they're being randomly logged out of the agent desktop during their shifts, sometimes multiple times in a day. It's not everyone — seems to be about 6 out of our 35 agents. I initially thought it was a browser issue so I had them clear cache and try different browsers but it kept happening. Then I thought maybe it was their network but they're all on the same office WiFi as agents who aren't having the problem. Someone on my team suggested it might be related to our SSO configuration since we switched to SAML-based login about 10 days ago and the complaints started around the same time. But I'm not sure if that's actually the cause or just a coincidence. The agents it affects don't seem to have anything obviously different about their accounts. Any ideas where to start?"
+  }
+]

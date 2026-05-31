@@ -1,4 +1,3 @@
-import { parse } from "dotenv";
 import { callTriageModel } from "./client.js";
 import { extractJson } from "./parse.js";
 import { validateTriage } from "./validate.js";

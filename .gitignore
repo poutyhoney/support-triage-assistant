@@ -1,2 +1,5 @@
 node_modules/
+howdy.js
+triage-v0.js
 .env
+*.zip
